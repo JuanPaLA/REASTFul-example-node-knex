@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="users"><h4>List of users</h4></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        //get data from localhost:8080/users
+
+    </script>
+    <script tpye="text/javascript">
+            $.get("http://localhost:8080/users", function(data, status){
+            data.forEach(element => {
+               var user = document.createElement("p");
+                user.innerHTML = element.name;
+                document.getElementById("users").appendChild(user);
+            });
+        });
+        //print data in div id users
+
+
+    </script>
+</body>
+</html>
